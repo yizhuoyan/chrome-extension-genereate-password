@@ -1,0 +1,35 @@
+{
+	"name": "Generate-Password",
+	"version": "0.0.1",
+	"description": "generate the password",
+	"developer": {
+			"name": "yizhuoyan@hotmail.com",
+			"url": "http://www.yizhuoyan.com"
+	},
+	"icons": {
+		"16": "icon_16.png",
+		"48": "icon_48.png",
+		"128": "icon_128.png"
+	},
+	// Pick one (or none)
+	"browser_action": { 
+		"default_icon": "icon.png",
+		"default_title": "Generate-Password",
+		"default_popup": "popup.html"
+	},
+	//"page_action": { … },
+
+	// Add any of these that you need
+	//"background": { "persistent": false},
+	//"content_scripts": [ … ],
+	//"content_security_policy": "policyString",
+	"homepage_url": "http://www.yizhuoyan.com",
+	"incognito": "spanning", // or "split"
+	
+	
+	//"options_page": "aFile.html",
+	//"permissions": [ … ],
+	//"requirements": { … },
+	//"update_url": "http://path/to/updateInfo.xml",
+	"manifest_version": 2
+}

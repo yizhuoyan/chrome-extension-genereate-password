@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8" >
+
+		<title>密码生成器</title>
+		<style>
+			body{
+				width: 400px;
+			}
+			input[type=number] {
+				width: 5em;
+				height: 2em;
+				text-align: center;
+				padding-left: 1em;
+				box-sizing: border-box;
+				border-radius: 5px;
+			}
+			
+			#resultEL {
+				border-radius: 5px;
+				height: 2em;
+				width: 50%;
+			}
+			
+			button {
+				height: 2em;
+				padding: 0 15px;
+			}
+			
+			h1 {
+				font-size: 200%;
+				border-bottom: 1px dashed;
+				padding-bottom: 5px;
+			}
+			#specialCharsEL{
+				box-sizing: border-box;
+			}
+			#specialCharContainer>* {
+				display: inline-block;
+				width: 80px;
+				height: 30px;
+			}
+			
+			.disabled,[disabled] {
+				color: #999;
+			}
+			section>p{
+				margin:5px 0;
+			}
+		</style>
+	</head>
+
+	<body>
+		<article>
+			<h1>密码生成器</h1>
+			<section>
+				<p>
+					<input data-for="#digitAmountEL" class="toggleCheckBox" type="checkbox" checked>
+					<span >
+						阿拉伯数字 [0-9] 至少:
+						<input id="digitAmountEL" type="number" value="1" min="1"> 个
+					</span>
+				</p>
+				
+				<p>
+					<input data-for="#lowerLetterAmountEL" class="toggleCheckBox" type="checkbox" checked>
+					<span>
+						小 写 字 母 [a - z]至少:
+						<input id="lowerLetterAmountEL" type="number" value="1" min="1"> 个
+					</span>
+				</p>
+
+				<p>
+					<input data-for="#upperLetterAmountEL" class="toggleCheckBox" type="checkbox" checked>
+					<span>
+						大 写 字 母 [A-Z] 至少:
+						<input id="upperLetterAmountEL" type="number" value="1" min="1"> 个
+					</span>
+				</p>
+
+				<p>
+					<input id="toggleSpecialCharEL" data-for="#specialCharAmountEL,#specialCharsEL,#includeAllEL" class="toggleCheckBox" type="checkbox" checked>
+					<span>
+						特 殊 字 符(如下) 至少:
+						<input id="specialCharAmountEL" type="number" value="1" min="1"> 个
+					</span>
+				</p>	
+				
+				<fieldset id="specialCharsEL" >
+						<legend>
+							<label>
+							全部包含<input  id="includeAllEL" checked type="checkbox" >
+							</label>
+						</legend>
+
+						<p id="specialCharContainer">
+						</p>
+				</fieldset>
+			</section>
+
+			<section>
+				<p>
+					<label>密码长度:
+						<input id="needLengthEL" type="number" value="12" min="1" autofocus/>
+					</label>
+					<button id="generateBtn">生成密码</button>
+				</p>
+				<p>
+					<input id="resultEL" type="text" />
+				</p>
+
+			</section>
+
+		</article>
+
+		<script type="text/javascript" src="popup.js" ></script>
+	</body>
+
+</html>
